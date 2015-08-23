@@ -2,7 +2,7 @@
 ## In this example, the inverse of a matrix is computed using the solve() function.  If an unchanged matrix is passed to the function,
 ## the cached value will be returned rather than re-computing the same value.
 
-## The makeCacheMatrix function takes a matrix as an argument.  
+## The makeCacheMatrix function creates a list of functions which get and set the value of the matrix and the cached inverse value of the matrix.  
 
 makeCacheMatrix <- function(x = matrix()) {
   m <- NULL
@@ -19,7 +19,8 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## The cacheSolve function checks to see if a matrix has already been solved.  If so, it returns the cached value.
+## Otherwise, it computes the inverse of the matrix, caches the solution, and returns the value.
 
 cacheSolve <- function(x, ...) {
 
